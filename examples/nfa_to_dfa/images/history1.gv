@@ -1,0 +1,7 @@
+digraph "NFA to DFA" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	0 [shape=point]
+	0 -> 1
+	1 -> 2 [label="b, a"]
+}

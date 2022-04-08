@@ -1,0 +1,8 @@
+digraph "Test1 intersection Test2" {
+	graph [rankdir=LR]
+	node [shape=circle]
+	0 [shape=point]
+	0 -> "1,4"
+	"1,4" -> "1,5" [label=b]
+	"1,4" -> "2,4" [label=a]
+}

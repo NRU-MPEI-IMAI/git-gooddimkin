@@ -1,0 +1,61 @@
+// (a+(a+b)(a+b)b)∗
+
+// digraph G {
+//     rankdir=LR
+//     node [shape=circle]
+//     0 [shape=point]
+//     0 -> 1
+//     1 [shape=doublecircle]
+//     1 -> 1 [label=a]
+//     1 -> 2 [label="a,b"]
+//     2 -> 3 [label="a,b"]
+//     3 -> 1 [label=b]
+// }
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+    0 [shape=point]
+    1 [shape=doublecircle]
+    12 [shape=doublecircle]
+    2
+    123 [shape=doublecircle]
+    23
+    3
+    13 [shape=doublecircle]
+
+    0 -> 1
+    1 -> 12 [label=a]
+    1 -> 2 [label=b]
+    12 -> 123 [label=a]
+    12 -> 23 [label=b]
+    2 -> 3 [label="a,b"]
+    123 -> 123 [label="a,b"]
+    23 -> 3 [label=a]
+    23 -> 13 [label=b]
+    3 -> 1 [label=b]
+    13 -> 12 [label="a,b"]
+}
+
+/*
+1 12 2 123 23 3 13
+1: a: 1 2
+    b: 2
+12: a: 1 2 3
+    b: 2 3
+2: a: 3
+   b: 3
+123: a: 123
+     b: 123
+23: a: 3
+    b: 13
+3: b: 1
+13: a: 12
+    b: 12
+*/
+
+/*
+k0 (2 3 23) (1 12 123 13)
+k1 (2) (3) (23) (1) (12) (13 123)
+k2 (2) (3) (23) (1) (12) (13) (123)
+*/

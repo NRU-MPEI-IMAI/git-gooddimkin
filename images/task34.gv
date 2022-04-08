@@ -1,0 +1,29 @@
+// L4 = отрицание L3
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+
+    subgraph AB {
+        000 [shape=point]
+        13 
+        14 [shape=doublecircle]
+        15 [shape=doublecircle]
+        23 [shape=doublecircle]
+        24 [shape=doublecircle]
+        25 [shape=doublecircle]
+        000 -> 13
+        13 -> 23 [label=a]
+        13 -> 14 [label=b]
+        14 -> 24 [label=a]
+        14 -> 15 [label=b]
+        15 -> 25 [label=a]
+        15 -> 13 [label=b]
+        23 -> 13 [label=a]
+        23 -> 24 [label=b]
+        24 -> 14 [label=a]
+        24 -> 25 [label=b]
+        25 -> 15 [label=a]
+        25 -> 23 [label=b]
+    }
+}

@@ -1,0 +1,16 @@
+// L = {w ∈ {a, b, c}∗ | |w|c = 1}
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+
+    0 [shape=point]
+    1
+    2 [shape=doublecircle]
+
+    0 -> 1
+    1 -> 1 [label="a,b"]
+    1 -> 2 [label=c]
+    2 -> 2 [label="a,b"]
+
+}

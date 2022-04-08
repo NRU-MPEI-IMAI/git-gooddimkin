@@ -1,0 +1,172 @@
+// L5 = L2 \ L3
+// aabbbbb
+
+digraph G {
+    rankdir=LR
+    node [shape=circle, label=""]
+
+    // subgraph 2 {
+    //     00 [shape=point]
+    //     7
+    //     8
+    //     9
+    //     10
+    //     11 [shape=doublecircle]
+    //     00 -> 7
+    //     7 -> 8 [label="a,b"]
+    //     8 -> 9 [label="a,b"]
+    //     9 -> 11 [label="a,b"]
+    //     10 -> 11 [label="a,b"]
+    //     11 -> 10 [label="a,b"]
+    // }
+
+    // subgraph 3 {
+    //     0 [shape=point]
+    //     1 
+    //     2 [shape=doublecircle]
+    //     3 [shape=doublecircle]
+    //     4 [shape=doublecircle]
+    //     5 [shape=doublecircle]
+    //     6 [shape=doublecircle]
+    //     0 -> 1
+    //     1 -> 4 [label=a]
+    //     1 -> 2 [label=b]
+    //     2 -> 5 [label=a]
+    //     2 -> 3 [label=b]
+    //     3 -> 6 [label=a]
+    //     3 -> 1 [label=b]
+    //     4 -> 1 [label=a]
+    //     4 -> 5 [label=b]
+    //     5 -> 2 [label=a]
+    //     5 -> 6 [label=b]
+    //     6 -> 3 [label=a]
+    //     6 -> 4 [label=b]
+    // }
+
+    // subgraph "2\3" {
+    //     000 [shape=point]
+    //     211 [shape=doublecircle]
+    //     311 [shape=doublecircle]
+    //     411 [shape=doublecircle]
+    //     511 [shape=doublecircle]
+    //     611 [shape=doublecircle]
+
+    //     000 -> 17
+    //     17 -> 48 [label=a]
+    //     17 -> 28 [label=b]
+    //     18 -> 49 [label=a]
+    //     18 -> 29 [label=b]
+    //     19 -> 411 [label=a]
+    //     19 -> 211 [label=b]
+    //     111 -> 410 [label=a]
+    //     111 -> 210 [label=b]
+    //     110 -> 411 [label=a]
+    //     110 -> 211 [label=b]
+        
+    //     27 -> 58 [label=a]
+    //     27 -> 38 [label=b]
+    //     28 -> 59 [label=a]
+    //     28 -> 39 [label=b]
+    //     29 -> 511 [label=a]
+    //     29 -> 311 [label=b]
+    //     211 -> 510 [label=a]
+    //     211 -> 310 [label=b]
+    //     210 -> 511 [label=a]
+    //     210 -> 311 [label=b]
+
+    //     37 -> 68 [label=a]
+    //     37 -> 18 [label=b]
+    //     38 -> 69 [label=a]
+    //     38 -> 19 [label=b]
+    //     39 -> 611 [label=a]
+    //     39 -> 111 [label=b]
+    //     311 -> 610 [label=a]
+    //     311 -> 110 [label=b]
+    //     310 -> 611 [label=a]
+    //     310 -> 111 [label=b]
+
+    //     47 -> 18 [label=a]
+    //     47 -> 58 [label=b]
+    //     48 -> 19 [label=a]
+    //     48 -> 59 [label=b]
+    //     49 -> 111 [label=a]
+    //     49 -> 511 [label=b]
+    //     411 -> 110 [label=a]
+    //     411 -> 510 [label=b]
+    //     410 -> 111 [label=a]
+    //     410 -> 511 [label=b]
+
+    //     57 -> 28 [label=a]
+    //     57 -> 68 [label=b]
+    //     58 -> 29 [label=a]
+    //     58 -> 69 [label=b]
+    //     59 -> 211 [label=a]
+    //     59 -> 611 [label=b]
+    //     511 -> 210 [label=a]
+    //     511 -> 610 [label=b]
+    //     510 -> 211 [label=a]
+    //     510 -> 611 [label=b]
+
+    //     67 -> 38 [label=a]
+    //     67 -> 48 [label=b]
+    //     68 -> 39 [label=a]
+    //     68 -> 49 [label=b]
+    //     69 -> 311 [label=a]
+    //     69 -> 411 [label=b]
+    //     611 -> 310 [label=a]
+    //     611 -> 410 [label=b]
+    //     610 -> 311 [label=a]
+    //     610 -> 411 [label=b]
+    // }
+        subgraph "2\3" {
+        000 [shape=point]
+        211 [shape=doublecircle]
+        311 [shape=doublecircle]
+        411 [shape=doublecircle]
+        511 [shape=doublecircle]
+        611 [shape=doublecircle]
+
+        000 -> 17
+        17 -> 48 [label=a]
+        17 -> 28 [label=b]
+        19 -> 411 [label=a]
+        19 -> 211 [label=b]
+        111 -> 410 [label=a]
+        111 -> 210 [label=b]
+        110 -> 411 [label=a]
+        110 -> 211 [label=b]
+        
+        28 -> 59 [label=a]
+        28 -> 39 [label=b]
+        211 -> 510 [label=a]
+        211 -> 310 [label=b]
+        210 -> 511 [label=a]
+        210 -> 311 [label=b]
+
+        39 -> 611 [label=a]
+        39 -> 111 [label=b]
+        311 -> 610 [label=a]
+        311 -> 110 [label=b]
+        310 -> 611 [label=a]
+        310 -> 111 [label=b]
+
+        48 -> 19 [label=a]
+        48 -> 59 [label=b]
+        411 -> 110 [label=a]
+        411 -> 510 [label=b]
+        410 -> 111 [label=a]
+        410 -> 511 [label=b]
+
+        59 -> 211 [label=a]
+        59 -> 611 [label=b]
+        511 -> 210 [label=a]
+        511 -> 610 [label=b]
+        510 -> 211 [label=a]
+        510 -> 611 [label=b]
+
+        611 -> 310 [label=a]
+        611 -> 410 [label=b]
+        610 -> 311 [label=a]
+        610 -> 411 [label=b]
+    }
+}

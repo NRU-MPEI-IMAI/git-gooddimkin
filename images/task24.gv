@@ -1,0 +1,11 @@
+// L = {w ∈ {a, b}∗ | ww = www} 
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+
+    0 [shape=point]
+    1 [shape=doublecircle]
+
+    0 -> 1
+}

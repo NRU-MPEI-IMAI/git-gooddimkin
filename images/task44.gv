@@ -1,0 +1,17 @@
+// (b+c)((ab)∗c+(ba)∗)∗ 
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+    0 [shape=point]
+    0 -> 1
+    1 -> 2 [label="b,c"]
+    2 [shape=doublecircle]
+    2 -> 3 [label="a"]
+    3 -> 5 [label="b"]
+    5 -> 3 [label=a]
+    5 -> 2:ne [label=c]
+    2 -> 2 [label="c"]
+    2 -> 4 [label="b"]
+    4 -> 2 [label="a"]
+}

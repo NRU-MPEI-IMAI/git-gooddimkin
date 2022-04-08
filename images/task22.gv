@@ -1,0 +1,68 @@
+// L = {w ∈ {a, b}* | |w|a ≤ 2, |w|b ≥ 2}
+
+digraph G {
+    rankdir=LR
+    node [shape=circle]
+
+    0 [shape=point]
+    1 [shape=doublecircle]
+    2 [shape=doublecircle]
+    3 [shape=doublecircle]
+    0 -> 1
+    1 -> 1 [label=b]
+    1 -> 2 [label=a]
+    2 -> 2 [label=b]
+    2 -> 3 [label=a]
+    3 -> 3 [label=b]
+    3 -> 7 [label=a]
+    7 -> 7 [label="a,b"]
+
+    00 [shape=point]
+    4
+    5
+    6 [shape=doublecircle]
+    00 -> 4
+    4 -> 5 [label=b]
+    4 -> 4 [label=a]
+    5 -> 6 [label=b]
+    5 -> 5 [label=a]
+    6 -> 6 [label="a,b"]
+
+    000 [shape=point]
+    14 [shape=doublecircle]
+    15 [shape=doublecircle]
+    16 [shape=doublecircle]
+    24 [shape=doublecircle]
+    25 [shape=doublecircle]
+    26 [shape=doublecircle]
+    34 [shape=doublecircle]
+    35 [shape=doublecircle]
+    36 [shape=doublecircle]
+    74
+    75
+    76 [shape=doublecircle]
+    000 -> 14
+    14 -> 24 [label=a]
+    14 -> 15 [label=b]
+    15 -> 25 [label=a]
+    15 -> 16 [label=b]
+    16 -> 26 [label=a]
+    16 -> 16 [label=b]
+    24 -> 34 [label=a]
+    24 -> 25 [label=b]
+    25 -> 35 [label=a]
+    25 -> 26 [label=b]
+    26 -> 36 [label=a]
+    26 -> 26 [label=b]
+    34 -> 74 [label=a]
+    34 -> 35 [label=b]
+    35 -> 75 [label=a]
+    35 -> 36 [label=b]
+    36 -> 76 [label=a]
+    36 -> 36 [label=b]
+    74 -> 74 [label=a]
+    74 -> 75 [label=b]
+    75 -> 75 [label=a]
+    75 -> 76 [label=b]
+    76 -> 76 [label="a,b"]
+}
